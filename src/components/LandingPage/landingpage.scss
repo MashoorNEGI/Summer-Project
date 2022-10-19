@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.btn-style:hover{
+    text-decoration: none;
+}
+.sub-header{
+    font-family: 'Poppins', sans-serif;
+    height: 110vh;  
+    animation: transitionIn 2s;  
+}
+.Band{
+    position: relative;
+    top: 50px;
+    left: 500px;
+    display: inline;
+    height: 20vh;
+
+}
+.Band img{
+    width: 30vw;
+    transition: all 0.3s ease;
+}
+.text-box{
+    float: left;
+    width: max-content;
+    padding: 40px;
+    margin-top: 10px; 
+}
+.sub-title{
+    line-height: 2;
+}
+.land-container{
+    top:-200px;
+    width: 20%;
+    margin-left: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.land-container .box{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.025);
+}
+
+.land-container .box:nth-child(1){
+    transform: translateX(-70px);
+    --clr:#fc5f9b;
+    
+}
+.land-container .box:nth-child(2){
+    --clr:#a362ea;
+}
+.land-container .box:nth-child(3){
+    transform: translateX(70px);
+    --clr:#0ed095;
+}
+.land-container:hover .box:nth-child(1){
+    transform: translateX(0px);
+}
+.land-container:hover .box:nth-child(3){
+    transform: translateX(0px);
+}
+
+.land-container .box::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background:var(--clr);
+    transition: 0.5s ease-in-out;
+}
+.land-container .box:hover::before{
+    width: 100%;
+}
+.land-container .box .content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.land-container .box .icon{
+    position: relative;
+    min-width: 30px;
+    display: flex;
+    justify-content: center;
+}
+.land-container .box .text h3{
+    font-weight: 500;
+    color: var(--clr);
+    transition: 0.5s ease-in-out;
+}
+.land-container .box .text p{
+    font-weight: 500;
+    color: #999;
+    font-size: 0.9em;
+    transition: 0.5s ease-in-out;
+}
+.land-container .box:hover .content .text p,
+.land-container .box:hover .content .text h3{
+    color: #fff;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;   
+    text-transform: uppercase;
+    color: rgb(238, 221, 221);
+    background: hsla(221, 27%, 43%, 0.5);
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.button:hover{
+    text-decoration: none;
+    color: rgba(225,225,225,1);
+}
+.button span{
+    display: block;
+    position: absolute;
+    background: #2894ffc4;
+}
+.button span:nth-child(1)
+{
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin:top;
+    transition:transform 0.5s;
+}
+.button:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin:bottom;
+    transition:transform 0.5s;
+}
+.button span:nth-child(2)
+{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin:right;
+    transition:transform 0.5s;
+}
+.button:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin:left;
+    transition:transform 0.5s;
+}
+.button span:nth-child(3)
+{
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin:top;
+    transition-delay:0.5s;
+    transition:transform 0.5s;
+}
+.button:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin:bottom;
+    transition-delay:0.5s;
+    transition:transform 0.5s;
+}
+.button span:nth-child(4)
+{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin:right;
+    transition:transform 0.5s;
+    transition-delay:0.5s;
+}
+.button:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin:left;
+    transition:transform 0.5s;
+    transition-delay:0.5s;
+}
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
