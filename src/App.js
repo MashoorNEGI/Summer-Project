@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className='max-w-screen-md mx-auto pt-20'>
         <Routes>
-          {user && <Route path="/Home" exact element={<Home/>} />}
+          {user  && <Route path="/Home" exact element={<Home/>} />}
           <Route path="/Support" element={<Support />} />
           <Route path="/Support" element={<Support />} />
           <Route path="/" element={<Landingpage />} />
