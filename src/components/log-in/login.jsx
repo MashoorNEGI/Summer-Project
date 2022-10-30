@@ -50,7 +50,7 @@ const Login = () => {
         document.getElementById("email").value = email
 
     }
-    const getPassword = ()=>{
+    const getPassword = () => {
         var password = getcookie("Password")
         document.getElementById("password").value = password
     }
@@ -82,7 +82,7 @@ const Login = () => {
                 invalid.style.display = "block"
                 setTimeout(function () {
                     invalid.style.display = "none"
-                    
+
                 }, 3000);
             }
             else {
@@ -116,7 +116,7 @@ const Login = () => {
                         <input type="email" name='Email' autoComplete='off' className="form-control custom-color" id="email"
                             value={Email}
                             onChange={(e) => setEmail(e.target.value)}
-                            onClick = {getEmail}
+                            onClick={getEmail}
                             placeholder="Email address" required />
 
                         <label>Email address</label>
